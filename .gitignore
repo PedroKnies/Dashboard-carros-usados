@@ -1,0 +1,12 @@
+# Ambiente virtual (cada um cria o seu com: python -m venv .venv)
+.venv/
+venv/
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+
+
+# Configurações locais
+.vscode/
+.streamlit/secrets.toml
