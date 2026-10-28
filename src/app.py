@@ -2,7 +2,6 @@ import streamlit as st
 
 import dados
 
-# Nomes legíveis para as colunas da tabela
 NOMES_COLUNAS = {
     "nome": "Modelo",
     "ano": "Ano",
