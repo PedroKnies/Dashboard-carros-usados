@@ -3,7 +3,7 @@ Membros: Felipe Domingues, Pedro Knies e Rafael Rosa
 
 Dataset: carros-usados.csv
 
-App publicado: [[https://...streamlit.app](https://github.com/Introducao-Python/datasets-trabalho-m2/blob/main/datasets/carros-usados.csv)](https://dashboard-carros-usados.streamlit.app/)
+App publicado: https://dashboard-carros-usados.streamlit.app/
 
 Funcionalidades
 Leitura dos dados do arquivo CSV do dataset.
