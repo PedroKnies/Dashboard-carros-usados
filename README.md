@@ -2,6 +2,7 @@ Dashboard-carros_usados
 Membros: Felipe Domingues, Pedro Knies e Rafael Rosa
 
 Dataset: carros-usados.csv
+Tema: dados de carros usados na Índia.
 
 App publicado: https://dashboard-carros-usados.streamlit.app/
 
@@ -19,9 +20,9 @@ Código organizado em funções e módulos, com nomes adequados ao tema do grupo
 Aplicação publicada no Streamlit Community Cloud.
 Funcionalidade extra
 
-No sistema será possível inserir novos veiculos
+No sistema será possível inserir novos veiculos.
 
-Como rodar o projeto
+Como rodar o projeto:
 Pré-requisitos
 Python instalado no computador.
 Git, caso deseje clonar o repositório.
@@ -47,3 +48,18 @@ Instale as dependências do projeto:
 
 Execute o aplicativo Streamlit:
    streamlit run src/app.py
+   
+Como utilizar:
+1. Acesse o aplicativo publicado no Streamlit.
+2. Localize o formulário de cadastro de veículos.
+3. Preencha os campos solicitados com as informações do veículo.
+4. Envie o formulário para cadastrar o veículo.
+
+Implementação:
+A funcionalidade foi desenvolvida com Python e Streamlit, utilizando os campos de entrada e os mecanismos de interação da interface para receber as informações do usuário e processar o novo registro.
+
+Tecnologias utilizadas:
+- Python — linguagem de programação.
+- Streamlit — criação e publicação da interface interativa.
+- Git e GitHub — controle de versão e colaboração no projeto.
+
