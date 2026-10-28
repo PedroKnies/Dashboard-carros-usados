@@ -4,16 +4,13 @@ from statistics import mean, median
 
 CAMINHO_DADOS = Path(__file__).parent / "carros-usados.csv"
 
-# Números escritos por extenso que podem aparecer no arquivo
 NUMEROS_EXTENSO = {
     "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
     "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
 }
 
 
-# ---------------------------------------------------------------
-# 1. Leitura do CSV
-# ---------------------------------------------------------------
+
 def ler_carros():
     """Lê o CSV e devolve uma lista de dicionários (tudo ainda como texto)."""
     carros = []
@@ -30,9 +27,6 @@ def ler_carros():
     return carros
 
 
-# ---------------------------------------------------------------
-# 2. Conversão das colunas
-# ---------------------------------------------------------------
 def converter_numero(texto):
     """Transforma '23.4 kmpl', '1,248 CC', '₹4.5 Lakh' ou 'five' em número.
 
@@ -55,7 +49,7 @@ def converter_numero(texto):
         multiplicador = 10000000
 
     texto = texto.replace(",", "").replace("₹", "")
-    primeira_parte = texto.split()[0]  # pega só o número, sem a unidade
+    primeira_parte = texto.split()[0]  
 
     try:
         return float(primeira_parte) * multiplicador
@@ -105,9 +99,7 @@ def tratar_carros(carros_brutos):
     return carros
 
 
-# ---------------------------------------------------------------
-# 3. Métricas
-# ---------------------------------------------------------------
+
 def calcular_metricas(carros):
     """Calcula as métricas do conjunto de carros recebido."""
     precos = [c["preco"] for c in carros if c["preco"] is not None]
@@ -130,9 +122,6 @@ def calcular_metricas(carros):
     return metricas
 
 
-# ---------------------------------------------------------------
-# 4. Busca e filtro
-# ---------------------------------------------------------------
 def listar_categorias(carros, campo):
     """Pega as opções direto dos dados, sem repetir e em ordem alfabética."""
     categorias = []
@@ -170,9 +159,6 @@ def buscar_e_filtrar(carros, termo, combustivel):
     return resultado
 
 
-# ---------------------------------------------------------------
-# 5. Adicionar novo carro (função extra do professor)
-# ---------------------------------------------------------------
 def salvar_carro(carro):
     """Adiciona um carro no final do CSV, no mesmo formato dos outros."""
     with open(CAMINHO_DADOS, "r", encoding="utf-8-sig", newline="") as arquivo:
@@ -193,7 +179,6 @@ def salvar_carro(carro):
         "assentos": carro["assentos"],
     }
 
-    # garante que o novo carro não fique colado na última linha
     with open(CAMINHO_DADOS, "rb") as arquivo:
         conteudo = arquivo.read()
     precisa_quebra = len(conteudo) > 0 and not conteudo.endswith(b"\n")
